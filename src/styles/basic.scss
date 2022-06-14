@@ -1,0 +1,137 @@
+@import './reset.scss';
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-family: 
+  /*System-UI-Font*/ -apple-system, BlinkMacSystemFont, /*Konow-UI-Font*/ 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', /*Our-Font*/ $font-family,
+    sans-serif;
+  font-size: 14px;
+  // letter-spacing: 1px;
+
+  color: $font-color;
+  background-color: $background-color;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Poppins ExtraBold;
+}
+
+a,
+button,
+div,
+img,
+svg {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+a {
+  color: $link-color;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+a:link {
+  text-decoration: none;
+  color: $link-color;
+}
+
+a:active {
+  color: $font-color;
+}
+
+a:visited {
+  text-decoration: none;
+  color: $font-color;
+}
+
+a:hover {
+  text-decoration: none;
+  color: $font-color;
+}
+
+.go-link {
+  position: relative;
+  text-transform: capitalize;
+  color: $hightlight-color !important;
+  &::after {
+    position: absolute;
+    content: '';
+    height: 14px;
+    width: 14px;
+    top: 50%;
+    right: -16px;
+    transform: translateY(-50%);
+    background: url('@/assets/img/common/arrow-right.svg');
+  }
+  &:hover {
+    color: inherit;
+  }
+}
+
+.flex {
+  display: flex;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.modal-enter-active {
+  animation: top-change 0.2s;
+}
+.modal-leave-active {
+  animation: top-change 0.2s reverse;
+}
+
+@keyframes top-change {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.6);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.scale-enter-active {
+  animation: fadeScale-change 0.2s;
+}
+.scale-leave-active {
+  animation: fadeScale-change 0.2s reverse;
+}
+
+@keyframes fadeScale-change {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+#walletconnect-wrapper {
+  color: #1d1f2e !important;
+  a {
+    color: inherit !important;
+  }
+}

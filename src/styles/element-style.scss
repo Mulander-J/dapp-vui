@@ -1,0 +1,191 @@
+@import 'element-plus/theme-chalk/display.css';
+@import 'element-plus/theme-chalk/src/notification.scss';
+
+:root {
+  --el-color-primary: #5652e5;
+  --el-color-success: #3cfea5;
+  --el-color-error: #ff7070;
+  --el-color-info: #918dff;
+  --el-text-color-regular: #fbfbff;
+}
+
+.el-checkbox {
+  --el-checkbox-bg-color: transparent;
+}
+
+.el-input {
+  --el-input-border-radius: 12px;
+  --el-input-bg-color: #3c3a48;
+  --el-input-placeholder-color: rgba(251, 251, 255, 0.3);
+  --el-input-border: none;
+  .el-input__inner {
+    padding: 16px;
+    box-sizing: border-box;
+    height: auto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+.accent .el-input .el-input__inner {
+  color: #ffa676;
+}
+
+.el-popper.is-dark .el-popper__arrow::before,
+.el-popper.is-dark {
+  background: #2c2839;
+  border: 1px solid #2c2839;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: rgba(251, 251, 255, 0.5);
+  max-width: 210px;
+}
+
+.el-backtop {
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fbfbff;
+
+  font-family: Poppins SemiBold;
+  font-weight: 600;
+  font-size: 12px;
+
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+  background: linear-gradient(
+    170.17deg,
+    rgba(176, 176, 238, 0.39) 15.21%,
+    rgba(67, 67, 119, 0.39) 85.79%
+  );
+  backdrop-filter: blur(14px);
+  &:hover {
+    background-color: inherit;
+  }
+}
+
+.metal-notify {
+  --el-notification-close-color: #3a6798;
+  --el-notification-close-hover-color: #3a6798;
+  background: linear-gradient(96.81deg, #1e3956 0.69%, #0a1521 99.06%);
+  box-shadow: 0px 8px 16px rgba(2, 12, 26, 0.86);
+  backdrop-filter: blur(15px);
+  border: none;
+  font-family: Poppins Medium;
+  .el-notification__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    font-family: Poppins Medium !important;
+  }
+}
+.withTxhash.info a,
+.metal-notify.info :is(.el-notification__icon, .el-notification__title, .el-notification__content) {
+  color: var(--el-color-info);
+}
+.withTxhash.success a,
+.metal-notify.success
+  :is(.el-notification__icon, .el-notification__title, .el-notification__content) {
+  color: var(--el-color-success);
+}
+.withTxhash.error a,
+.metal-notify.error
+  :is(.el-notification__icon, .el-notification__title, .el-notification__content) {
+  color: var(--el-color-error);
+}
+.metal-notify.warning
+  :is(.el-notification__icon, .el-notification__title, .el-notification__content) {
+  color: var(--el-color-info);
+}
+
+.withTxhash {
+  user-select: none;
+  .el-notification__group {
+    width: 100%;
+    .el-notification__content {
+      width: 100%;
+      label {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        color: rgba(251, 251, 255, 0.5);
+        margin-right: 20px;
+      }
+      span {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        color: #fbfbff;
+      }
+      a {
+        cursor: pointer;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 18px;
+        text-align: right;
+        margin-top: 16px;
+        display: block;
+      }
+    }
+  }
+}
+
+.ep-table {
+  --el-table-border-color: rgba(251, 251, 255, 0.3);
+  --el-table-border: 1px solid var(--el-table-border-color);
+  --el-table-header-text-color: rgba(251, 251, 255, 0.5);
+  --el-table-row-hover-bg-color: #18161e;
+  --el-table-header-bg-color: #0e0d13;
+  --el-table-bg-color: #0e0d13;
+  --el-table-tr-bg-color: #0e0d13;
+  th {
+    .cell {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+  td {
+    .cell {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      font-family: Poppins Medium;
+      .cbtn {
+        font-family: Poppins Medium !important;
+      }
+    }
+  }
+  .el-loading-mask {
+    z-index: 3;
+  }
+}
+.ep-collapse {
+  --el-collapse-border-color: rgba(251, 251, 255, 0.3);
+  --el-collapse-header-height: auto;
+  --el-collapse-header-bg-color: transparent;
+  --el-collapse-header-text-color: #fff;
+  --el-collapse-header-font-size: 16px;
+  --el-collapse-content-bg-color: transparent;
+  --el-collapse-content-font-size: 14px;
+  --el-collapse-content-text-color: var(--el-text-color-regular);
+
+  .el-collapse-item__header {
+    padding: 1rem 0;
+    font-family: Poppins SemiBold;
+  }
+}

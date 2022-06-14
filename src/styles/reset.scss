@@ -1,0 +1,20 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  outline: none;
+}
+
+// 消除子元素 margin-top 对 body 的影响
+#app::before,
+body::before {
+  content: '';
+  display: table;
+}
+
+ul,
+li {
+  list-style: none;
+}
