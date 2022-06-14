@@ -7,3 +7,7 @@ The DAPP Interface Template base on Vuejs
 ```bash
 npm run dev
 ```
+
+## Feature
+
+- Connect Wallet
